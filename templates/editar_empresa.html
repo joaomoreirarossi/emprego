@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}EmpreGO! | Editar empresa {% endblock %}
+
+{% block content %}
+
+<h1>Editar empresa</h1>
+    <hr>
+    <form action="/editar_empresa/{{empresa['id_empresa']}}" method="post">
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="nome_empresa" value="{{ empresa['nome_empresa'] }}" placeholder="." required>
+            <label for="nome_empresa">Nome Fantasia da Empresa</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="cnpj" value="{{ empresa['cnpj'] }}" maxlength="14" placeholder="." required>
+            <label for="cnpj">CNPJ</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" type="text" name="telefone" value="{{ empresa['telefone'] }}" maxlength="11" placeholder="." required>
+            <label for="telefone">Telefone de contato</label><br>
+        </div>
+    <h2>Informações para acesso da plataforma</h2>
+    
+        <div class="form-floating mb-3">
+            <input class="form-control" type="email" name="email" value="{{ empresa['email'] }}" placeholder="." required>
+            <label for="email">E-mail (LOGIN)</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" type="senha" name="senha" value="{{ empresa['senha'] }}" placeholder="." required>
+            <label for="senha">Senha (LOGIN)</label>
+        </div>
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary mb-3">Salvar alterações</button>
+    </div>
+    {% if msg_erro %} <p>{{ msg_erro }}</p> {% endif %}
+    
+    </form>
+
+{% endblock %}

@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}EmpreGO! - Contato{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Contato | EmpreGO</h1>
+        <p>Entre em contato conosco preenchendo o formulário abaixo.</p>
+
+        <form action="/enviar-mensagem" method="post" class="needs-validation" novalidate>
+            <div class="form-floating mb-3">
+                <input type="text" id="nome" name="nome" class="form-control" placeholder="." required>
+                <label  for="nome">Nome</label>
+                <div class="valid-feedback">
+                    Informação válida!
+                </div>
+                <div class="invalid-feedback">
+                    Informe o seu nome.
+                </div>
+            </div><br>
+            <div class="form-floating mb-3">
+                <input type="email" id="email" name="email" class="form-control" placeholder="." required>
+                <label for="email">E-mail</label>
+                <div class="valid-feedback">
+                    Informação válida!
+                </div>
+                <div class="invalid-feedback">
+                    Informe o E-mail pessoal.
+                </div>
+            </div><br>
+            <div class="form-floating mb-3">
+                <input type="text" id="assunto" name="assunto" class="form-control" placeholder="." required>
+                <label for="assunto">Assunto</label>
+                <div class="valid-feedback">
+                    Informação válida!
+                </div>
+                <div class="invalid-feedback">
+                    Informe o assunto que deseja falar.
+                </div>
+            </div><br>
+            <div class="form-floating mb-3">
+                <textarea id="mensagem" name="mensagem" class="form-control" placeholder="." required></textarea>
+                <label for="mensagem">Mensagem</label>
+                <div class="valid-feedback">
+                    Informação válida!
+                </div>
+                <div class="invalid-feedback">
+                    Informe a mensagem que deseja enviar.
+                </div>
+            </div><br>
+            <button type="submit" class="btn btn-dark mb-3">Enviar Mensagem</button><br><br>
+        </form>
+        
+        <div class="contact-info">
+            <p><strong>Telefone:</strong> (11) 98765-4321</p>
+            <p><strong>E-mail:</strong> contato@emprego.com.br</p>
+            <p><strong>Endereço:</strong> Rua dos Empreendedores, 123, São Paulo - SP</p>
+        </div>
+    </div>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+    
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+    </script>
+{% endblock %}

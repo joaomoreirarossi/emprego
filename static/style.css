@@ -1,0 +1,145 @@
+body{
+    min-height: 100vh;
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2a2e39; /* Cor de destaque */
+    transition: color 0.3s;
+}
+
+.card-title:hover {
+    color: #1f2334; /* Tom mais escuro ao passar o mouse */
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6c757d; /* Cor mais suave */
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.card-text small {
+    font-size: 0.8rem;
+}
+
+.btn-primary {
+    background-color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.card-text .text-muted {
+    color: #6c757d;
+}
+.card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.card {
+    border: 1px solid #e0e0e0; /* Borda sutil */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Sombra mais suave */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+    background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%); /* Gradiente suave */
+    padding: 20px;
+}
+.card-title {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6c757d; /* Cor mais suave */
+    margin-bottom: 8px;
+}
+.card-text {
+    font-size: 0.9rem;
+    color: #333;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra suave no texto */
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os cartões */
+}
+
+.col-12, .col-md-6, .col-lg-4 {
+    flex: 1;
+    min-width: 280px;
+}
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+button:hover {
+    background-color: #737373; /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Efeito de leve elevação */
+}
+
+button:focus {
+    outline: none; /* Remover o contorno do foco */
+}
